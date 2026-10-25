@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michael Weber – Photography</title>
+  <meta name="description" content="Monochrome Photography.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="logo" href="./">Michael Weber</a>
+    <nav>
+      <a id="contact-link" href="mailto:hello@example.com">Contact</a>
+      <a href="imprint.html">Imprint</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="intro" br>light, edges.</h1>
+    <section id="gallery" class="grid" aria-label="Gallery"></section>
+  </main>
+
+  <div id="viewer" class="viewer" hidden>
+    <button class="viewer-close" aria-label="Close">Close</button>
+    <img id="viewer-img" alt="" draggable="false">
+    <div class="viewer-bar">
+      <span id="viewer-title"></span>
+      <a id="viewer-inquire" href="#">Inquire about this print</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
