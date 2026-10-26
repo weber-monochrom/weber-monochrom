@@ -3,7 +3,7 @@
   const CONFIG = {
     json: 'gallery.json',
     imgDir: 'img/',
-    email: 'hello@example.com',
+    email: 'vamn22@protonmail.com',
     subjectPrefix: 'Print inquiry: '
   };
 
