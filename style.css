@@ -21,7 +21,7 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--ink);outline-offset
   60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
 @media (prefers-reduced-motion:reduce){.grain{animation:none}}
 
-.nav{display:flex;justify-content:space-between;align-items:baseline;padding:var(--pad)}
+.nav{display:flex;justify-content:space-between;align-items:flex-end;padding:var(--pad)}
 .logo{font:400 1.05rem var(--serif);letter-spacing:.01em}
 .nav nav{display:flex;gap:2rem}
 .nav nav a,.viewer-bar a,.viewer-close{color:var(--ink-soft);transition:color .2s}
@@ -50,3 +50,8 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--ink);outline-offset
 .viewer-bar{position:absolute;left:var(--pad);right:var(--pad);bottom:var(--pad);display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
 .viewer-bar span{font:italic 400 1rem var(--serif)}
 .viewer-bar a{cursor:pointer;border-bottom:1px solid currentColor;padding-bottom:2px}
+@media (max-width: 768px) {
+  .intro {
+    padding-top: 1.5rem; 
+  }
+}
