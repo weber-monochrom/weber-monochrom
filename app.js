@@ -16,11 +16,20 @@
   const $ = id => document.getElementById(id);
   const grid = $('gallery'), viewer = $('viewer'), vImg = $('viewer-img');
 
-  $('contact-link').href = 'mailto:' + CONFIG.email;
+  if ($('contact-link')) {
+    $('contact-link').href = 'mailto:' + CONFIG.email;
+  }
 
   fetch(CONFIG.json)
     .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(render)
+    .then(items => {
+      // Fisher-Yates Shuffle für zufällige Bildreihenfolge
+      for (let i = items.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [items[i], items[j]] = [items[j], items[i]];
+      }
+      render(items);
+    })
     .catch(() => { grid.innerHTML = '<p>gallery.json konnte nicht geladen werden. Bitte über einen Webserver öffnen, nicht per Doppelklick.</p>'; });
 
   function render(items) {
@@ -48,7 +57,8 @@
 
       const cap = document.createElement('span');
       cap.className = 'cap';
-      cap.textContent = [it.title, it.year].filter(Boolean).join(', ');
+      // Nur noch den Titel (die Nummer) anzeigen
+      cap.textContent = it.title || '';
 
       b.append(frame, cap);
       b.addEventListener('click', () => open(it));
@@ -66,6 +76,7 @@
     viewer.hidden = false;
     document.body.style.overflow = 'hidden';
   }
+  
   function close() {
     viewer.hidden = true;
     vImg.removeAttribute('src');
