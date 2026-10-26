@@ -32,8 +32,8 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--ink);outline-offset
 /* Asymmetrisches 12-Spalten-Grid: Position kommt aus der JSON */
 .grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:var(--pad);row-gap:clamp(5rem,14vw,12rem);align-items:start;padding:0 var(--pad) clamp(6rem,16vw,14rem)}
 .tile{grid-column:var(--start) / span var(--span);background:none;border:0;cursor:pointer;text-align:left;display:block;width:100%;font:inherit;color:inherit}
-.tile .frame{display:block;aspect-ratio:var(--ratio);background:#e4e1da}
-.tile img{display:block;width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none;user-select:none;opacity:1}
+.tile .frame{display:block;background:#e4e1da}
+.tile img{display:block;width:100%;height:auto;pointer-events:none;-webkit-user-drag:none;user-select:none;opacity:1}
 .tile img.ready{opacity:1}
 .tile .cap{display:block;margin-top:.9rem;color:var(--ink-soft);font-size:.78rem}
 
