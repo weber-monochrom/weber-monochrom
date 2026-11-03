@@ -17,7 +17,10 @@
 
   let galleryItems = []; // Speichert die Bilder für die Navigation
   let currentIndex = -1; // Speichert das aktuell offene Bild
-
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
   if ($('contact-link')) {
     $('contact-link').href = 'mailto:' + CONFIG.email;
   }
