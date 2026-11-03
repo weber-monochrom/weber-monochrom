@@ -21,7 +21,7 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--ink);outline-offset
   60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
 @media (prefers-reduced-motion:reduce){.grain{animation:none}}
 
-.nav{display:flex;justify-content:space-between;align-items:flex-end;padding:var(--pad)}
+.nav{display:flex;justify-content:space-between;align-items:flex-start;padding:var(--pad)}
 .logo{font:400 1.05rem var(--serif);letter-spacing:.01em}
 .nav nav{display:flex;gap:2rem}
 .nav nav a,.viewer-bar a,.viewer-close{color:var(--ink-soft);transition:color .2s}
